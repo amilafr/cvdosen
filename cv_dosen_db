@@ -1,0 +1,245 @@
+-- --------------------------------------------------------
+-- Host:                         localhost
+-- Server version:               5.7.24 - MySQL Community Server (GPL)
+-- Server OS:                    Win64
+-- HeidiSQL Version:             10.2.0.5599
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- Dumping structure for table cv_dosen.admin
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id_admin` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `terakhir_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_admin`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table cv_dosen.admin: ~3 rows (approximately)
+/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+INSERT INTO `admin` (`id_admin`, `username`, `email`, `password`, `terakhir_on`) VALUES
+	(4, 'admin', 'amilafr25@gmail.com', '123456', '2021-07-18 10:24:19'),
+	(5, 'admin_mhs', 'amilaaa@gmail.com', '123456', '2021-07-19 10:54:25');
+/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
+
+-- Dumping structure for table cv_dosen.dosen
+CREATE TABLE IF NOT EXISTS `dosen` (
+  `id_dosen` int(11) NOT NULL AUTO_INCREMENT,
+  `foto` varchar(200) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `NIK` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `department` varchar(250) NOT NULL,
+  `lecture_expertise` varchar(250) NOT NULL,
+  `link_sinta` varchar(500) NOT NULL,
+  PRIMARY KEY (`id_dosen`)
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table cv_dosen.dosen: ~56 rows (approximately)
+/*!40000 ALTER TABLE `dosen` DISABLE KEYS */;
+INSERT INTO `dosen` (`id_dosen`, `foto`, `name`, `NIK`, `email`, `department`, `lecture_expertise`, `link_sinta`) VALUES
+	(1, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/KEPALA-DEPARTEMEN-e1505926194601.jpg', 'Fredy Mardiyantoro, drg. Sp.BM.', '2012088303181001', 'fredy.mardiyantoro@ub.ac.id', 'Oral and Maxillofacial Surgery', 'Oral and Maxillofacial Surgery', 'https://sinta.ristekbrin.go.id/authors/detail?id=5996269&view=overview'),
+	(3, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2759-e1505926313288.jpg ', 'Ester Handayani Lodra, drg., Sp.BM.', '2012047510012001 \r\n', '(kosong)', 'Oral and Maxillofacial Surgery', 'Oral and Maxillofacial Surgery', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689253&view=overview '),
+	(5, 'n/a', 'Zefry Zainal Abidin, drg. ', '2014058612301001', '(kosong)', 'Oral and Maxillofacial Surgery ', 'Oral and Maxillofacial Surgery ', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689329&view=overview'),
+	(6, 'n/a', 'Fitriana, drg.', '141089654', '(kosong)', 'Oral and Maxillofacial Surgery ', 'Oral and Maxillofacial Surgery ', 'n/a'),
+	(7, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/KEPALA-DEPARTEMEN-1.jpg', 'Dyah Nawang Palupi p, drg., M.Kes.', '2008086708262001', '(kosong)', 'Community Dentistry ?Prevention ', 'Community Dentistry ?Prevention ', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689194&view=overview'),
+	(8, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_1286.jpg ', 'Yully Endang Hernani, drg., M.MS.', '195607271984032002', '(kosong)', 'Community Dentistry ?Prevention ', 'Community Dentistry ?Prevention ', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689336&view=overview/'),
+	(9, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_1292.jpg', 'Trining Widodorini, drg., M.Kes.', '2010036805242001', '(kosong)', 'Community Dentistry ?Prevention ', 'Community Dentistry ?Prevention ', 'n/a'),
+	(10, 'n/a', 'Yuanita Lely Rachmawati, drg., M.Kes.', '197801282005012008', '(kosong)', 'Community Dentistry ?Prevention ', 'Community Dentistry ?Prevention ', 'n/a'),
+	(11, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_1287.jpg', 'Merlya Balbeid, drg., MMRS.', '2012087507312001', '(kosong)', 'Community Dentistry ?Prevention ', 'Community Dentistry ?Prevention ', 'n/a'),
+	(12, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/KEPALADEPARTEMEN.jpg', 'Dini Rachmawati, drg, Sp.KGA.', '197811192010122002', '(kosong)', 'Pediatric Dentistry', 'Pediatric Dentistry', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689194&view=overview'),
+	(13, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2518.jpg', 'Dr. Muhammad Chair Effendi, drg., Su,. Sp.KGA.', '195306181979121005', '(kosong)', 'Pediatric Dentistry', 'Pediatric Dentistry', 'https://sinta.ristekbrin.go.id/authors/detail?id=5996262&view=overview'),
+	(14, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2537.jpg', 'Ambar Puspitasari, drg., Sp.KGA.', '2012087704122001', '(kosong)', 'Pediatric Dentistry', 'Pediatric Dentistry', 'https://sinta.ristekbrin.go.id/authors/detail?id=5997890&view=overview'),
+	(15, 'n/a', 'Edina Hartami, drg., Sp.KGA.', '2016078601082001', '(kosong)', 'Pediatric Dentistry', 'Pediatric Dentistry', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689028&view=overview'),
+	(16, 'n/a', 'Amaliyah Nur Irianti, drg.', '2016079103312001', '(kosong)', 'Pediatric Dentistry', 'Pediatric Dentistry', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689206&view=overview'),
+	(17, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/KEPALA-DEPARTEMEN-3-e1505929596985.jpg', 'Yuliana Ratna Kumala, drg., Sp.KG.', '198004092008122004', '(kosong)', 'Dental Conservation ', 'Dental Conservation ', 'https://sinta.ristekbrin.go.id/authors/detail/?id=5996193&view=overview'),
+	(18, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_1424.jpg', 'Yuli Nugraeni, drg., Sp.KG.', '2008096907222001', '(kosong)', 'Dental Conservation ', 'Dental Conservation ', 'https://sinta.ristekbrin.go.id/authors/detail?id=6000941&view=overview'),
+	(19, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_1402.jpg', 'Chandra Sari Kurniawati, drg., Sp.KG.', '2012087901162001', '(kosong)', 'Dental Conservation ', 'Dental Conservation ', 'https://sinta.ristekbrin.go.id/authors/detail/?id=5997104&view=overview'),
+	(20, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_1388.jpg', 'Rahma Vidyanti Priyanto, drg., Sp.KG.', '198707152019032016', '(kosong)', 'Dental Conservation ', 'Dental Conservation ', 'n/a'),
+	(21, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2540.jpg', 'Lukman Hakim Hidayat, drg., Sp.PM.', '2012038204161001', '(kosong)', 'Oral Medicine', 'Oral Medicine', 'https://sinta.ristekbrin.go.id/authors/detail/?id=6195838&view=overview'),
+	(22, 'https://fkg.ub.ac.id/wp-content/uploads/2020/09/drg-miftah-200x300.jpeg', 'Miftakhul Cahyati, drg., Sp.PM.', '197708032010122001', '(kosong)', 'Oral Medicine', 'Oral Medicine', 'https://sinta.ristekbrin.go.id/authors/detail/?id=6673124&view=overview'),
+	(23, 'https://fkg.ub.ac.id/wp-content/uploads/2020/01/drg-astika.jpg', 'Astika Swastirani, drg., M.Si.', '2016078907152001', '(kosong)', 'Oral Medicine', 'Oral Medicine', 'https://sinta.ristekbrin.go.id/authors/detail?id=6688838&view=overview'),
+	(24, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/KEPALA-DEPARTEMEN-4.jpg ', 'Rudhanton, drg., Sp.Perio.', '2008086311081001', '(kosong)', 'Periodontics', 'Periodontics', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689197&view=overview'),
+	(25, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2521.jpg', 'Diah, drg., Sp.Perio.', '2010037203292001', '(kosong)', 'Periodontics', 'Periodontics', 'n/a'),
+	(26, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2530.jpg', 'Ranny Rachmawati, drg., Sp. Perio', '2011068208272001', '(kosong)', 'Periodontics', 'Periodontics', 'https://sinta.ristekbrin.go.id/authors/detail/?id=6011410&view=overview'),
+	(27, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2535.jpg', 'Khusnul Munika Listari, drg. Sp.Perio.', '2013048303302001', '(kosong)', 'Periodontics', 'Periodontics', 'https://sinta.ristekbrin.go.id/authors/detail?id=6011125&view=overview'),
+	(28, 'n/a', 'Ega Lucida Chandra Kumala, drg. Sp.Perio.', '2013048701181001', '(kosong)', 'Periodontics', 'Periodontics', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689182&view=overview'),
+	(29, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2532.jpg', 'Nungky Devitaningtyas, drg', '2016079005262001', '(kosong)', 'Periodontics', 'Periodontics', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689204&view=overview'),
+	(30, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2617.jpg', 'Fidya, drg. M.Si.', '2009088301152001', '(kosong)', 'Oral Biology', 'Oral Biology', 'https://sinta.ristekbrin.go.id/authors/detail?id=5997906&view=overview'),
+	(31, 'https://fkg.ub.ac.id/wp-content/uploads/2017/08/R-SETYOHADI.jpg', 'R. Setyohadi, drg., MS.', '195802121985031003', '(kosong)', 'Oral Biology', 'Oral Biology', 'https://sinta.ristekbrin.go.id/authors/detail?id=6009899&view=overview'),
+	(32, 'https://fkg.ub.ac.id/wp-content/uploads/2017/08/NUR-PERMATASARI.jpg', 'Dr. Nur Permatasari, drg., MS.', '196010051991032001', '(kosong)', 'Oral Biology', 'Oral Biology', 'https://sinta.ristekbrin.go.id/authors/detail?id=6007509&view=overview'),
+	(33, 'https://fkg.ub.ac.id/wp-content/uploads/2017/08/NOVI-KHILA-FIRANI.jpg', 'Novi  Khila Firani, dr.,  M.Kes.,Sp.PK.', '197611022003122001', '(kosong)', 'Oral Biology', 'Oral Biology', 'https://sinta.ristekbrin.go.id/authors/detail?id=5979050&view=overview'),
+	(34, 'https://fkg.ub.ac.id/wp-content/uploads/2017/08/PRASETYO-ADI.jpg', 'Prasetyo adi, drg., MS.', '195604161983031003', '(kosong)', 'Oral Biology', 'Oral Biology', 'https://sinta.ristekbrin.go.id/authors/detail?id=6670941&view=overview'),
+	(35, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2610.jpg', 'Nenny Prasetyaningrum, drg., M.Ked', '2009028129222001', '(kosong)', 'Oral Biology', 'Oral Biology', 'https://sinta.ristekbrin.go.id/authors/detail?id=5998011&view=overview'),
+	(36, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2628.jpg', 'Viranda Sutanti, drg., M.Si', '198408272018032001', '(kosong)', 'Oral Biology', 'Oral Biology', 'https://sinta.ristekbrin.go.id/authors/detail?id=6670610&view=overview'),
+	(37, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2608.jpg ', 'Diena Fuadiyah, drg., M.Si', '2014058612292001', '(kosong)', 'Oral Biology', 'Oral Biology', 'https://sinta.ristekbrin.go.id/authors/detail?id=6000940&view=overview'),
+	(38, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2614.jpg', 'Ratih Pusporini, drg., M.Si', '2014058202172001', '(kosong)', 'Oral Biology', 'Oral Biology', 'https://sinta.ristekbrin.go.id/authors/detail?id=6008750&view=overview'),
+	(39, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2622.jpg', 'Ariyati Retno Pratiwi, drg., M.Kes', '2016079001072001', '(kosong)', 'Oral Biology', 'Oral Biology', 'https://sinta.ristekbrin.go.id/authors/detail?id=6182285&view=overview'),
+	(40, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2613.jpg ', 'Malianawati Fauzia, drg., Sp.Perio', '2016078807232001', '(kosong)', 'Oral Biology', 'Oral Biology', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689284&view=overview'),
+	(41, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2538.jpg', 'Neny Roeswahjuni, drg., Sp.Ort.', '2012087710162001', '(kosong)', 'Orthodontics', 'Orthodontics', 'https://sinta.ristekbrin.go.id/authors/detail?id=5997981&view=overview'),
+	(42, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2738.jpg', 'Ernani Indrawati, drg., Sp.Ort.', '195604231981122002', '(kosong)', 'Orthodontics', 'Orthodontics', 'n/a'),
+	(43, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2748.jpg', 'Nur Masita Silviana, drg., Sp.Ort.', '197501272009122001', '(kosong)', 'Orthodontics', 'Orthodontics', 'https://sinta.ristekbrin.go.id/authors/detail?id=6006046&view=overview'),
+	(44, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2754.jpg', 'Kuni Ridha Andini, drg., Sp.Ort.', '2010037807092001', '(kosong)', 'Orthodontics', 'Orthodontics', 'n/a'),
+	(45, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2732.jpg', 'Endah Damaryanti, drg. Sp.Ort.', '2013098012272001', '(kosong)', 'Orthodontics', 'Orthodontics', 'https://sinta.ristekbrin.go.id/authors/detail?id=6161078&view=overview'),
+	(46, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2757.jpg', 'Sari Kurniawati, drg. Sp.Ort.', '2016078201312002', '(kosong)', 'Orthodontics', 'Orthodontics', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689261&view=overview'),
+	(47, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/KEPALA-DEPARTEMEN-5.jpg', 'Diwya Nugrahini hapsari, drg., Sp.Pros.', '2010037806242001', '(kosong)', 'Prosthodontics', 'Prosthodontics', 'https://sinta.ristekbrin.go.id/authors/detail?id=5996411&view=overview'),
+	(48, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2508.jpg ', 'Kartika Andari Wulan, drg., Sp.Pros.', '197906112009122003', '(kosong)', 'Prosthodontics', 'Prosthodontics', 'https://sinta.ristekbrin.go.id/authors/detail?id=6009984&view=overview'),
+	(49, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2459.jpg ', 'Citra Insany Irgananda, drg., M.Med.Ed.', '198606232015042001', '(kosong)', 'Prosthodontics', 'Prosthodontics', 'https://sinta.ristekbrin.go.id/authors/detail?id=6010048&view=overview'),
+	(50, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2455.jpg', 'Fatima, drg., Sp.Pros.', '140479639', '(kosong)', 'Prosthodontics', 'Prosthodontics', 'n/a'),
+	(51, 'n/a', 'Rangga Surya Fathrianto, drg., Sp.Pros.', '2013048701281001', '(kosong)', 'Prosthodontics', 'Prosthodontics', 'n/a'),
+	(52, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2451.jpg', 'Dika Agung Bakhtiar, drg., Sp.Pros.', '2013098608111001', '(kosong)', 'Prosthodontics', 'Prosthodontics', 'https://sinta.ristekbrin.go.id/authors/detail?id=6751319&view=overview'),
+	(53, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2458.jpg ', 'Sinta Candra Wardani, drg.', '2016078804242001', '(kosong)', 'Prosthodontics', 'Prosthodontics', 'https://sinta.ristekbrin.go.id/authors/detail?id=6688725&view=overview'),
+	(54, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/KEPALA-DEPARTEMEN-6.jpg', 'Delvi Fitriani, drg. M.Kes.', '2009027012082001', '(kosong)', 'Dentistry Material Science', 'Dentistry Material Science', 'https://sinta.ristekbrin.go.id/authors/detail?id=5998257&view=overview'),
+	(55, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_1283.jpg', 'Lalita El Milla, drg., M.Si.', '2013048706302001', '(kosong)', 'Dentistry Material Science', 'Dentistry Material Science', 'https://sinta.ristekbrin.go.id/authors/detail?id=6686057&view=overview'),
+	(56, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2839-e1511951220635.jpg ', 'Feni Istikharoh, drg.', '2016079004242001', '(kosong)', 'Dentistry Material Science', 'Dentistry Material Science', 'https://sinta.ristekbrin.go.id/authors/detail?id=6184235&view=overview'),
+	(57, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/KEPALA-DEPARTEMEN-2.jpg', 'Farihah Septina, drg., Sp. Rad.O.M.', '2013048609082001', '(kosong)', 'Dentistry Radiology Science', 'Dentistry Radiology Science', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689191&view=overview'),
+	(58, 'https://fkg.ub.ac.id/wp-content/uploads/2017/09/IMG_2207.jpg ', 'Tubagus Agnizarridlo, drg., M.Med.Ed', '2014058907121001', '(kosong)', 'Dentistry Radiology Science', 'Dentistry Radiology Science', 'https://sinta.ristekbrin.go.id/authors/detail?id=6689167&view=overview');
+/*!40000 ALTER TABLE `dosen` ENABLE KEYS */;
+
+-- Dumping structure for table cv_dosen.education
+CREATE TABLE IF NOT EXISTS `education` (
+  `id_education` int(11) NOT NULL AUTO_INCREMENT,
+  `tahun` int(11) DEFAULT NULL,
+  `universitas` varchar(100) DEFAULT NULL,
+  `gelar` varchar(50) DEFAULT NULL,
+  `id_dosen` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_education`),
+  KEY `FK_dosen_edu` (`id_dosen`),
+  CONSTRAINT `FK_dosen_edu` FOREIGN KEY (`id_dosen`) REFERENCES `dosen` (`id_dosen`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table cv_dosen.education: ~0 rows (approximately)
+/*!40000 ALTER TABLE `education` DISABLE KEYS */;
+/*!40000 ALTER TABLE `education` ENABLE KEYS */;
+
+-- Dumping structure for table cv_dosen.komik
+CREATE TABLE IF NOT EXISTS `komik` (
+  `id_komik` int(11) NOT NULL AUTO_INCREMENT,
+  `judul` varchar(255) NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `penulis` varchar(200) NOT NULL,
+  `penerbit` varchar(250) NOT NULL,
+  `sampul` varchar(250) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated` datetime DEFAULT NULL,
+  PRIMARY KEY (`id_komik`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table cv_dosen.komik: ~3 rows (approximately)
+/*!40000 ALTER TABLE `komik` DISABLE KEYS */;
+INSERT INTO `komik` (`id_komik`, `judul`, `slug`, `penulis`, `penerbit`, `sampul`, `created_at`, `updated`) VALUES
+	(1, 'Naruto', 'naruto', 'Masasi kishimoto', 'Shonen jump', 'naruto.jpg', NULL, NULL),
+	(2, 'One Piece', 'one-piece', 'Eichiro Oda', 'Gramedia', 'op.jpg', NULL, NULL),
+	(5, 'aaaa', 'aaaa', 'aaa', 'sss', 'sss', NULL, NULL);
+/*!40000 ALTER TABLE `komik` ENABLE KEYS */;
+
+-- Dumping structure for table cv_dosen.publication
+CREATE TABLE IF NOT EXISTS `publication` (
+  `id_publication` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `link` varchar(255) DEFAULT NULL,
+  `authors` varchar(200) DEFAULT NULL,
+  `publish_at` varchar(250) DEFAULT NULL,
+  `id_dosen` int(11) NOT NULL,
+  PRIMARY KEY (`id_publication`),
+  KEY `id_dosen` (`id_dosen`),
+  CONSTRAINT `publication_ibfk_1` FOREIGN KEY (`id_dosen`) REFERENCES `dosen` (`id_dosen`)
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table cv_dosen.publication: ~76 rows (approximately)
+/*!40000 ALTER TABLE `publication` DISABLE KEYS */;
+INSERT INTO `publication` (`id_publication`, `title`, `link`, `authors`, `publish_at`, `id_dosen`) VALUES
+	(12, 'Penyembuhan luka rongga mulut', 'https://books.google.co.id/books?hl=en&lr=&id=ntWFDwAAQBAJ&oi=fnd&pg=PR5&ots=TAXHsZf8PR&sig=lT581ht9lPj1AXkrNu8u2iwp-m8&redir_esc=y#v=onepage&q&f=false', 'F Mardiyantoro, K Munika, V Sutanti, M Cahyati, AR Pratiwi', 'Universitas Brawijaya Press | vol: | issue : | 2018', 1),
+	(13, 'ONE-PIECE DENTAL IMPLANT UNTUK REHABILITASI RUANG KANINUS YANG SEMPIT ', 'http://jurnal.unissula.ac.id/index.php/odj/article/view/1545 ', 'F Mardiyantoro, AR Pratiwi', 'ODONTO: Dental Journal 4 (1), 61-66 | vol: | issue : | 2017', 1),
+	(14, 'PENGARUH GELATIN IKAN PATIN (PANGASIUS DJAMBAL) TERHADAP JUMLAH FIBROBLAS PADA LUKA PASCA PENCABUTAN GIGI TIKUS PUTIH (RATTUS NORVEGICUS)\r\n', 'http://lppm-unissula.com/jurnal.unissula.ac.id/index.php/odj/article/view/4391', 'F Mardiyantoro, F Fidya, DS Andriani\r\n', 'ODONTO: Dental Journal 6, 1-5 | vol: | issue : | 2019\r\n', 1),
+	(15, 'Histopathological characteristics of dental socket healing on collagen density following use of pangas catfish (Pangasius djambal) gelatin\r\n\r\n', 'https://journal.ugm.ac.id/mkgi/article/view/39830', 'F Mardiyantoro, N Prasetyaningrum, HT Rahmastuti\r\n', 'Majalah Kedokteran Gigi Indonesia 5 (3), 120-125 | vol: | issue : | 0000\r\n', 1),
+	(16, 'PENGARUH LENDIR BEKICOT (Achatina fulica) TERHADAP JUMLAH FIBROBLAS PADA SOKET \r\n', 'https://eprodenta.ub.ac.id/index.php/eprodenta/article/view/48', 'F Mardiyantoro, ZZ Abidin, A Swastirani, H Dibya\r\n', 'E-Prodenta Journal of Dentistry 4 (2), 307-313 | vol: | issue : | 2020\r\n', 1),
+	(20, 'Penyebaran Infeksi Odontogen dan Tatalaksana: Dasar Pemahaman tentang Infeksi pada Rongga Mulut dan Sekitarnya', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'F Mardiyantoro', 'Universitas Brawijaya Press | vol: | issue : | 2017', 1),
+	(21, 'Manajemen Klinis Pasien Gigi dan Mulut', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'F Mardiyantoro', 'PT. Reva Petra Media 1, 82 | vol: | issue : | 2015', 1),
+	(22, 'MODIFIED FEEDING BOTTLE FOR INFANT WITH CLEFT LIP AND PALATE AT THE PERIPHERAL AREA: A CASE REPORT', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'F Mardiyantoro, DN Hapsari, L El Milla', 'Jurnal Ilmiah dan Teknologi Kedokteran Gigi 15 (1), 29-32 | vol: | issue : | 2019', 1),
+	(23, '10.	EFFECT OF ALPHA TOCOPHEROL SUPPLEMENTATION ON TUMOR NECROSIS FACTOR-ALPHAEXPRESSION IN HUMAN BONE MARROW MESENCHYMAL STEM CELL (IN VITRO STUDY)', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'CP WAYAN SUTRESNA YASA, NI PUTU MIRA SUMARTA, FREDY MARDIYANTORO, PURWATI', 'Asian Journal of Microbiology, Biotechnology & Environmental Sciences 20 … | vol: | issue : | 2018', 1),
+	(24, 'DISTRIBUSI OPERASI CLEFT LIP DAN PALATE NON SINDROMIK PASIEN-PASIEN BEDAH MULUT DAN MAKSILOFASIAL FAKULTAS KEDOKTERAN GIGI DAN RUMAH SAKIT GIGI DAN MULUT UNIVERSITAS AIRLANGGA', '', 'ZZ ABIDIN', 'Universitas Airlangga | vol: | issue : | 2019', 5),
+	(26, 'PERBEDAAN ANTARA PROSES PENYEMBUHAN TULANG PADA PENGGUNAAN BAHAN TANDUR TULANG DEMINERALIZED FREEZE DRIED BONE XENOGRAFT DAN BOVINE BONE HIDROXYAPATITE XENOGRAFT', '', 'ZZ ABIDIN', 'Universitas Airlangga | vol: | issue : | 2018', 5),
+	(28, 'Emergency management of temporomandibular joint dislocation with manual reduction', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'ZZ Abidin, R Baehaqi', 'Journal of Case Reports in Dental Medicine 1 (2), 27-31 | vol: | issue : | 2019', 5),
+	(30, 'Pengaruh waktu perendaman resin akrilik heat cured dalam larutan natrium bikarbonat 5% terhadap kekuatan impak', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5&cluster=16170282684402056978', 'C Effendi, DN Hapsari, AR Putriyanti', '| vol: | issue : | 2011', 47),
+	(31, 'The effect of addition of hydroxyapatite from skipjack tuna (katsuwonus pelamis) fish bone flour to the transverse, impact, and tensile strength of heat cured acrylic resin', 'https://www.jdmfs.org/index.php/jdmfs/article/view/1016?__cf_chl_jschl_tk__=a86afba637b5074d5f02fdeda16e70d682da2663-1624595352-0-AYyzB5OTI5sg0dxKkzuVxiRYXsWXSi06GOL3bdAZzfytFbjjWSbuz8RHkRi6Me0wcG2shbTa6HhPfkvspK7bI_pO-OWks5MFl04ik25_MnqDbkmTyKx6D3q1iMGap', 'DN Hapsari, SC Wardani, WA Firdausya, K Amaturrohman, HP Wiratama', 'J Dentomaxillofac Sci 5, 94-7 | vol: | issue : | 2020', 47),
+	(32, 'EFEK EKSTRAK DAUN MAHKOTA DEWA (Phaleria macrocarpa) SEBAGAI PENGHAMBAT PEMBENTUKAN BIOFILM PADA Streptococcus mutans SECARA IN VITRO', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'DN Hapsari, H Almira', 'PRODENTA JOURNAL OF DENTISTRY 1 (1), 24-34 | vol: | issue : | 2017', 47),
+	(33, 'MODIFIED FEEDING BOTTLE FOR INFANT WITH CLEFT LIP AND PALATE AT THE PERIPHERAL AREA: A CASE REPORT', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'F Mardiyantoro, DN Hapsari, L El Milla', 'Jurnal Ilmiah dan Teknologi Kedokteran Gigi 15 (1), 29-32 | vol: | issue : | 2019', 47),
+	(34, 'Synthesis and potential of skipjack tuna bone hydroxyapatite as bone tissue engineering biomaterial', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'SC Wardani, H Sujuti, E Mustamsir, DN Hapsari', 'Journal of Physics: Conference Series 1665 (1), 012032 | vol: | issue : | 2020', 47),
+	(35, 'PERBANDINGAN MORFOLOGI DAN RASIO CA/P SERBUK HIDROKSIAPATIT DARI TULANG IKAN CAKALANG (KATSUWONUS PELAMIS) DENGAN HIDROKSIAPATIT SISIK IKAN', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'SC Wardani, DN Hapsari, F Fatima', 'E-Prodenta Journal of Dentistry 4 (2), 314-320 | vol: | issue : | 2020', 47),
+	(36, 'Pengaruh perendaman lempeng akrilik serat kaca 3% dalam larutan kopi robusta terhadap kekuatan impak', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5&cluster=3688452253395636245', 'R Setyohadi', 'Skripsi. Malang: Universitas Brawiyaja, 1-8 | vol: | issue : | 2013', 48),
+	(37, 'Pengaruh Perendaman Lempeng Akrilik Serat Kaca 3%(Heat cured) dalam Larutan Kopi Robusta Terhadap Kekuatan Impak', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5&cluster=3443312933348103201', 'R Setyohadi, KA Wulan, SD Rindy', 'Fakultas Kedokteran Universitas Brawijaya, 1-8 | vol: | issue : | 2013', 48),
+	(38, 'Pengaruh Jus Buah Belimbing Manis (Averrhoa carambola Linn.) Terhadap Peningkatan Jumlah Fibroblas Pada Soket Tikus Strain Wistar Pasca Ekstraksi Gigi', 'https://jprodenta.ub.ac.id/index.php/prodenta/article/view/23', 'KA Wulan, IP Sari', 'PRODENTA JOURNAL OF DENTISTRY 1 (2), 62-70 | vol: | issue : | 2013', 48),
+	(39, 'Pengaruh lama perendaman resin akrilik heat cured dalam larutan cabai rawit terhadap kekuatan impak', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5&cluster=9460842927888437186', 'S Handayani, KA Wulan, DF Sari', 'Majalah Kesehatan FK UB, 28-34 | vol: | issue : | 2013', 48),
+	(40, 'EffectOf Panax Ginseng Extract For The Increased Number Of Fibroblasts Cells After Tooth Extraction', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5&cluster=17648390798187902815', 'FR Hutomo, N Permatasari, KA Wulan', 'Insisiva Dental Journal: Majalah Kedokteran Gigi Insisiva 1 (1) | vol: | issue : | 2012', 48),
+	(41, '6.	Efek Ekstra Ginseng Asia (Panax Ginseng) Pada Jumlah Sel Epitel Mukosa Soket Pasca Pencabutan Gigi Pada Rattus Norvegicus', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5&cluster=13420040497919915907', 'K Permatasari, W Andari, DEN Merina', 'Malang: Majalah FKUB | vol: | issue : | 2012', 48),
+	(42, 'PERBEDAAN STABILITAS DIMENSI ANTARA HASIL PENCETAKAN POLIETER YANG DIPEROLEH MELALUI TEKNIK PENCAMPURAN MANUAL DAN PENCAMPURAN OTOMATIS', 'https://scholar.google.com/scholar?oi=bibs&cluster=1580615667194596700&btnI=1&hl=en', 'KA Wulan, DF Fitriani, L Al Hazmy', 'E-Prodenta Journal of Dentistry 3 (1), 196-207 | vol: | issue : | 2019', 48),
+	(43, 'EFEKTIVITAS LIMBAH CAIR TAHU TERHADAP KADAR MDA (MALONDIALDEHID) TULANG MANDIBULA PADA TIKUS PASKA OVARIEKTOMI', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'N Permatasari, KA Wulan, AH Putri', '| vol: | issue : | 0000', 48),
+	(44, 'EFEK EKSTRAK METANOL DAUN CIPLUKAN (Physalis minima, Linn) TERHADAP JUMLAH SEL OSTEOSIT PADA TULANG MANDIBULA TIKUS WISTAR (Rattus novergicus) PASCA OVARIEKTOMI', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'O Hertanti, N Permatasari, KA Wulan', '| vol: | issue : | 0000', 48),
+	(45, 'Pengaruh Lama Perendaman Lempeng Akrilik Heat Cured dalam Perasan Daun Salam (Syzygium polyanthum) terhadap Perubahan Warna', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'G Pamungkas', 'Universitas Brawijaya | vol: | issue : | 2014', 48),
+	(46, 'PENGARUH WAKTU PENYIMPANAN MODEL CETAKAN GIPSUM TIPE III TERHADAP PERUBAHAN DIMENSIONAL LINEAR HASIL CETAKAN', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'D Fitriani, KA Wulan, E Suputro', 'E-Prodenta Journal of Dentistry 1 (2), 79-87 | vol: | issue : | 2017', 48),
+	(47, '12.	PENGARUH LAMA PERENDAMAN RESIN AKRILIK HEAT CURED DALAM MINUMAN TEH HIJAU (Camellia Sinensis) TERHADAP KEKUATAN TRANSVERSA', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'W Susilaningtyas, KA Wulan, DD Yanti', '| vol: | issue : | 0000', 48),
+	(48, 'EFEK LAMA PERENDAMAN RESIN AKRILIK HEAT CURED DALAM LARUTAN NATRIUM HIPOKLORIT 0, 5% TERHADAP KEKUATAN IMPAK', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'W Susilaningtyas, KA Wulan, RL Saraswati', '| vol: | issue : | 0000', 48),
+	(49, 'KEKERASAN MODEL GIGI BERBAHAN DASAR SELF-CURED ACRYLIC SEBAGAI MEDIA PEMBELAJARAN KETERAMPILAN KLINIS PROSTODONSIA', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'CI Irgananda, KA Wulan, F Fatima', 'E-Prodenta Journal of Dentistry 4 (2), 321-329 | vol: | issue : | 2020', 48),
+	(50, 'Pengaruh Kualitas Skenario Dan Peran Fasilitator Terhadap Keefektifan Diskusi Kelompok Problem-Based Learning', 'https://www.erudio.ub.ac.id/index.php/erudio/article/view/204', 'CI Irgananda, T Widodorini', 'Erudio Journal of Educational Innovation 4 (1), 8-15 | vol: | issue : | 2018', 49),
+	(51, 'KEEFEKTIFAN DENTAL VIRTUAL PATIENT SIMULATION (DENTIENT’S) SEBAGAI METODE PEMBELAJARAN CLINICAL REASONING PADA MAHASISWA PROGRAM S1 PENDIDIKAN DOKTER GIGI FAKULTAS KEDOKTERAN', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'CI IRGANANDA', 'Universitas Gadjah Mada | vol: | issue : | 2012', 49),
+	(52, 'KEEFEKTIFAN DENTAL VIRTUAL PATIENT SIMULATION (DENTIENTâ S) SEBAGAI METODE PEMBELAJARAN CLINICAL REASONING PADA MAHASISWA PROGRAM S1 PENDIDIKAN DOKTER GIGI FAKULTAS', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'CI IRGANANDA, SSK Harsono', 'Text | vol: | issue : | 2012', 49),
+	(53, 'THE STUDENT’S PERCEPTION OF CONSTRUCTIVE FEEDBACK GIVEN BY INSTRUCTORS IN THE PROSTHODONTIC’S CLINICAL SKILLS LEARNING', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'CI Irgananda, AN Khairani', 'Erudio Journal of Educational Innovation 6 (1), 95-101 | vol: | issue : | 2019', 49),
+	(54, 'CHANGES IN ABILITY OF SELF-DIRECTED LEARNING OF THE THIRD-YEAR STUDENTS ON PROBLEM-BASED LEARNING', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'CI Irgananda, CS Kurniawati, TE Gautama, SI A’raaf', 'Erudio Journal of Educational Innovation 5 (2) | vol: | issue : | 2018', 49),
+	(55, 'SCOT (Structured Clinical Operative Test): Penilaian Kompetensi Mahasiswa Kedokteran Gigi Dalam Melakukan Prosedur Tindakan Invasif', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'CI Irgananda, A Suryadinata', 'Erudio Journal of Educational Innovation 2 (1) | vol: | issue : | 2013', 49),
+	(56, 'Pengembangan Sistem Simulasi Pembelajaran Kasus Pada Mahasiswa Kedokteran Gigi', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'N Qamariyah', 'Bogor Agricultral University (IPB) | vol: | issue : | 0000', 49),
+	(57, 'KEKERASAN MODEL GIGI BERBAHAN DASAR SELF-CURED ACRYLIC SEBAGAI MEDIA PEMBELAJARAN KETERAMPILAN KLINIS PROSTODONSIA', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'CI Irgananda, KA Wulan, F Fatima', 'E-Prodenta Journal of Dentistry 4 (2), 321-329 | vol: | issue : | 2020', 49),
+	(58, 'PENGARUH PEMBERIAN TERAPI LIMBAH CAIR TAHU TERHADAP PERBAIKAN PENURUNAN TINGGI TULANG ALVEOLAR MANDIBULA TIKUS PASCA-OVARIEKTOMI', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'N Permatasari, R Sidharta, D Ayuningtyas', '| vol: | issue : | 0000', 24),
+	(59, 'PENGARUH PEMBERIAN EKSTRAK ETANOL KULIT JERUK NIPIS (Citrus aurantifolia) TERHADAP JUMLAH TNFα PADA GINGIVA TIKUS JANTAS GALUR WISTAR YANG DIINDUKSI Actinobacillus', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'P Adi, R Sidharta, A Nurika', '| vol: | issue : | 0000', 24),
+	(60, 'PENGARUH PEMBERIAN LIMBAH CAIR TAHU SEBAGAI ISOFLAVON TERHADAP JUMLAH SEL OSTEOKLAS PADA TULANG MANDIBULAR TIKUS WISTAR (RATTUS NORVEGICUS) PASCA OVARIEKTOMI', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'N Devitaningtyas, N Permatasari, R Sidharta', 'E-Prodenta Journal of Dentistry 2 (2), 155-162 | vol: | issue : | 2018', 24),
+	(61, 'Isolasi Minyak Atsiri Kenanga (Cananga Odorata) Menggunakan Metode Distilasi Uap Termodifikasi', 'http://kimia.studentjournal.ub.ac.id/index.php/jikub/article/view/233', 'RC Rachmawati, R Retnowati, UP Juswono', 'Jurnal Ilmu Kimia Universitas Brawijaya 1 (2), pp. 276-282 | vol: | issue : | 2013', 26),
+	(62, 'Peran perawat dalam meningkatkan kebersihan gigi dan mulut anak tunagrahita', 'https://eprodenta.ub.ac.id/index.php/eprodenta/article/view/8', 'DN Palupi, R Rachmawati, ZO Anggraini', 'E-Prodenta Journal of Dentistry 1 (1), 32-44 | vol: | issue : | 2017', 26),
+	(63, 'Perbedaan Tingkat Kerentanan Terjadinya Gingivitis Antara Wanita menopause Dengan Wanita Pascamenopause', 'https://jprodenta.ub.ac.id/index.php/prodenta/article/view/30', 'R Setyohadi, R Rachmawati, S Hartati', 'PRODENTA JOURNAL OF DENTISTRY 1 (1), 1-6 | vol: | issue : | 2017', 26),
+	(64, 'O’Mark: Inovasi Pemanfaatan Prostaglandin E2 dalam Saliva Sebagai Evaluasi Tingkat Keparahan Periodontitis', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'F Amelia, T Pustaka, FT Irsyadi, AA Fitriana, Y Seputraningrum', 'Prosiding Elektronik Pekan Ilmiah Mahasiswa Nasional Program Kreativitas … | vol: | issue : | 2014', 26),
+	(65, 'The effect of NAF 5% and NANONaF to the permanent tooth endurance toward dental caries', 'https://www.proquest.com/docview/1763751034?pq-origsite=gscholar&fromopenview=true', 'R Rachmawati, NKAF Dewi', 'Journal of International Dental and Medical Research 8 (2), 34 | vol: | issue : | 2015', 26),
+	(66, 'Comparative Evaluation Of Diametral Tensile Strength Of Phosphate Bonded Investment Materials After Drying By Various Methods”–An Invitro Study', 'https://scholar.google.com/scholar?oi=bibs&cluster=371166594567570051&btnI=1&hl=en', 'G Anne, PJK Babu, OSH Bindu, C Sandeep', 'J int dent med res 201 (4), 2 | vol: | issue : | 2011', 26),
+	(67, 'Departemen Periodonsia Fakultas Kedokteran Gigi Universitas Indonesia Jakarta, Indonesia', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'R Rachmawati, C Masulili, S Lelyati, FM Tadjoedin, I Sukardi', 'Journal of Dentomaxillofacial Science | vol: | issue : | 2011', 26),
+	(68, 'PENGARUH PEMBERIAN EKSTRAK ETANOL KULIT JERUK NIPIS (Citrus aurantifolia) TERHADAP JUMLAH IL-1 PADA GINGIVA TIKUS JANTAS GALUR WISTAR YANG DIINDUKSI Actinobacillus', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'P Adi, R Rachmawati, R Septi', '| vol: | issue : | 0000', 26),
+	(69, 'Efektivitas Penyuluhan Teknik Menyikat Gigi Terhadap Perawat Tunagrahita dengan OHI-s Anak Tunagrahita Ringan di Asrama SLB Bhakti Luhur Malang', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'ZO Anggraini', 'Universitas Brawijaya | vol: | issue : | 2014', 26),
+	(70, 'Gigi tiruan sebagian kerangka logam sebagai splint permanen pada penderita penyakit periodontal (laporan kasus) Metal frame partial denture as a splint for periodontal disease', '', 'FKGU Indonesia', '| vol: | issue : | 0000', 26),
+	(71, 'Isolasi dan Uji aktivitas Minyak Atsiri Bunga Kenanga (Cananga odorata) sebagai Antiradikal pada Berbagai Waktu Reaksi Menggunakan Electron Spin Resonance (ESR)', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'RC Rachmawati', 'Universitas Brawijaya | vol: | issue : | 2013', 26),
+	(72, 'Penyembuhan luka rongga mulut', 'https://books.google.co.id/books?hl=en&lr=&id=ntWFDwAAQBAJ&oi=fnd&pg=PR5&ots=TAXHuXm5MW&sig=Db8vYopPdxuRpfFI5ol-eetEiOc&redir_esc=y#v=onepage&q&f=false', 'F Mardiyantoro, K Munika, V Sutanti, M Cahyati, AR Pratiwi', 'Universitas Brawijaya Press | vol: | issue : | 2018', 27),
+	(73, 'EKSPRESI RANKL PADA DEFEK TULANG DENGAN PEMBERIAN XENOGRAFT DIBANDINGKAN DENGAN XENOGRAFT DAN PRF', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'I Ruhadi, N Ulfa', 'E-Prodenta Journal of Dentistry 3 (1), 216-224 | vol: | issue : | 2019', 27),
+	(74, 'DERAJAT KESESUAIAN ANTARA DIAGNOSA KLINIS DENGAN DIAGNOSA HISTOPATOLOGI PADA KASUS EPULIS (Penelitian Retrospektif Dengan Metode Survey Analitik)', '', 'EGA L C KUMALA', 'UNIVERSITAS AIRLANGGA | vol: | issue : | 2009', 28),
+	(76, 'Evaluation of antibacterial potential of carbonated hydroxyapatite combined with propolis on porphyromonas gingivalis', 'https://journal.ugm.ac.id/TradMedJ/article/view/55173', 'N Devitaningtyas, A Syaify, D Herawati, S Suryono', 'Majalah Obat Tradisional 25 (1), 55-58 | vol: | issue : | 2020', 29),
+	(77, 'Characteristic assay of incorporation of carbonated hydroxyapatite–propolis as an alternative for alveolar bone loss therapy on periodontitis: An in vitro study', 'https://www.jioh.org/article.asp?issn=0976-7428;year=2020;volume=12;issue=5;spage=463;epage=469;aulast=Suryono ', 'S Suryono, I Kusumawati, N Devitaningtyas, AN Sukmawati, P Wijayanti', 'Journal of International Oral Health 12 (5), 463-469 | vol: | issue : | 2020', 29),
+	(78, 'PENGARUH PEMBERIAN LIMBAH CAIR TAHU SEBAGAI ISOFLAVON TERHADAP JUMLAH SEL OSTEOKLAS PADA TULANG MANDIBULAR TIKUS WISTAR (RATTUS NORVEGICUS) PASCA OVARIEKTOMI', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'N Devitaningtyas, N Permatasari, R Sidharta', 'E-Prodenta Journal of Dentistry 2 (2), 155-162 | vol: | issue : | 2018', 29),
+	(79, '5.	Combining 10% propolis with carbonated hydroxyapatite to observe the RANKL expression in a rabbit’s alveolar bone', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'N Devitaningtyas, A Syaify, D Herawati', 'Dental Journal (Majalah Kedokteran Gigi) 53 (4), 212-216 | vol: | issue : | 2020', 29),
+	(80, 'THE EFFICACY OF GREEN TEA (Camellia sinensis) LEAVES EXTRACT AS CORROSION INHIBITOR FOR ORTHODONTICS STAINLESS-STEEL WIRE', 'https://ppjp.ulm.ac.id/journal/index.php/dentino/article/view/6187 ', 'N Roeswahjuni, D Fitriani, AD Wardanianti', 'Dentino: Jurnal Kedokteran Gigi 4 (1), 77-82 | vol: | issue : | 2019', 41),
+	(81, 'EFEK REMINERALISASI CASEIN PHOSPOPEPTIDE-AMORPHOUS CALCIUM PHOSPATE (CPP-ACP) TERHADAP ENAMEL GIGI SULUNG', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'C Kurniawati, L Hakim, N Roeswahjuni', 'E-Prodenta Journal of Dentistry 3 (2), 257-262 | vol: | issue : | 2019', 41),
+	(82, 'Biomarker: Inflamasi Jaringan Periodontal', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'NK Firani, N Roeswahjuni, M Fauzia, R Priyanto, AR Pratiwi', 'Universitas Brawijaya Press | vol: | issue : | 2020', 41),
+	(83, 'Mengangkat permainan tradisional mongmongan menjadi permainan edukasi kesehatan gigi dan mulut', 'https://eprodenta.ub.ac.id/index.php/eprodenta/article/view/9', 'T Widodorini, NM Silviana, IGAW Yudha', 'E-Prodenta Journal of Dentistry 2 (2), 140-148 | vol: | issue : | 2018', 43),
+	(84, 'Perbandingan Efek Bahan Pelapik Mineral Trioxide Aggregate (MTA) Dengan Propolis Terhadap Respon Ekspresi DMP1 Pada Sel Odontoblas', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'P Adi, NM Silviana, PK Sari', 'Skripsi. Malang: Program Studi Pendidikan Dokter Gigi Fakultas Kedokteran … | vol: | issue : | 0000', 43),
+	(85, 'Peran faktor genetik dalam proses pertumbuhan Kraniofasial yang mempengaruhi terjadinya Maloklusi', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'NM Silviana', 'Jurnal PDGI 64 (3), 142-148 | vol: | issue : | 2015', 43),
+	(86, 'EFEKTIVITAS AIR KELAPA SEBAGAI MEDIA SIMPAN GIGI AVULSI DALAM MENJAGA VIA-BILITAS SEL FIBROBLAS (IN VITRO)', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'E Asmaningsih, NM Silviana, S Hussein', '| vol: | issue : | 0000', 43),
+	(87, 'Masticatory Functional Load increases ACTN2 and ACTN3 mRNA and α-Actinin-2 Protein Expression in Rat Masseter Muscle', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'NM Silviana, S Andarini, D Lyrawati, M Hidayat', '| vol: | issue : | 0000', 43),
+	(88, 'The Microarchitecture and Atomic Mineral Composition of the Rats’ Mandibular Condyle Varying Masticatory Functional Loads', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'NM Silviana, S Andarini, D Lyrawati, M Hidayat', 'Journal of International Dental and Medical Research 13 (2), 463-468 | vol: | issue : | 2020', 43),
+	(89, 'Masticatory Functional Load Increases the mRNA Expression Levels of ACTN2 and ACTN3 and the Protein Expression of α-Actinin-2 in Rat Masseter Muscle', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'NM Silviana, S Andarini, D Lyrawati, M Hidayat', 'Turkish Journal of Pharmaceutical Sciences 18 (1), 28 | vol: | issue : | 2021', 43),
+	(90, 'The differences in the objective grading system index before and after dentoskeletal class I ortodontic treatment using the standard Edgewise appliances', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'E Damaryanti, B Thahar, J Salim, E Mardiati', 'Padjadjaran Journal of Dentistry 26 (3) | vol: | issue : | 2014', 45),
+	(91, 'PERBEDAAN EFEKTIVITAS TEH IDTAM DAN TEH HIJAU SEBAGAI OBAT KUMUR DALAM MENGHAMBAT AWAL PEMBENTUKAN PLAK (KLINIS)', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'E DAMARYANTI', 'Universitas Airlangga | vol: | issue : | 2003', 45),
+	(92, 'GAMBARAN TINGKAT KEPARAHAN MALOKLUSI PADA PASIEN ORTHODONTI ANTARA TAHUN 2012-2015 DAN 2015-2018 DI RS UNIVERSITAS BRAWIJAYA MENGGUNAKAN INDEKS ICON', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'E Damaryanti, E Indrawati, A Firdausi', 'E-Prodenta Journal of Dentistry 3 (2), 240-248 | vol: | issue : | 2019', 45),
+	(93, 'Perbandingan Ukuran Linier dan Luas Kraniofasial Antara Sisi Kanan dan Sisi Kiri Pada Laki Laki dan Perempuan Jawa dengan Sefalogram Postero-Anterior Metode Grummons', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'S Kurniawati, D Sutantyo, CA Farmasyanti', 'Jurnal Kedokteran Gigi 4 (3), 193-197 | vol: | issue : | 2013', 46),
+	(94, 'Penyimpangan Seksual: Sebuah Interpretasi Teologi, Psikologi dan Pendidikan Islam', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'Masmuri', 'Raheema 3 (1), 100-113 | vol: | issue : | 2016', 57),
+	(95, 'Dasar-Dasar Keselamatan Pasien pada Praktik Dokter Gigi', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'DNP Pratamawawi, LH Hidayat, E Hartami, F Septina, A Swastirani', 'Universitas Brawijaya Press | vol: | issue : | 2019', 57),
+	(96, 'ANALISIS ANTEGONION INDEKS DAN MENTAL INDEKS PADA SUBJEK HIPERTENSI PENGGUNA AMLODIPINE YANG DI EVALUASI MENGGUNAKAN RADIOGRAF PANORAMIK', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'F Septina, L Epsilawati', 'E-Prodenta Journal of Dentistry 4 (1), 284-292 | vol: | issue : | 2020', 57),
+	(97, 'Mengenal Terapi Radiasi dan Kemoterapi bagi Dokter Gigi', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'F Septina, F Mardiyantoro, S Winias', 'Universitas Brawijaya Press | vol: | issue : | 2020', 57),
+	(98, 'Perbedaan kualitas hasil radiograf periapikal antara film konvensional dan film instan di Instalasi Radiologi FKG Universitas Brawijaya Malang', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'F Septina, R Reyvaldo', 'Jurnal Radiologi Dentomaksilofasial Indonesia (JRDI) 4 (1), 45-49 | vol: | issue : | 2020', 57),
+	(99, 'ANALISA KETINGGIAN TULANG KORTEKS MANDIBULA PENGGUNA AMLODIPIN MENGGUNAKAN RADIOGRAF PANORAMIK', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'F Septina', '| vol: | issue : | 2016', 57),
+	(100, 'PERBEDAAN DAYA HAMBAT PASTA GIGI DENGAN KANDUNGAN EKSTRAK TEH HIJAU 0, 25%, 0, 5%, 0, 75% DAN 1% TERHADAP STREPTOCOCCUS MUTANS', 'http://repository.unair.ac.id/19653/', 'T Agnizarridlo, S Sidarningsih ', 'UNIVERSITAS AIRLANGGA | vol: | issue : | 2011', 58),
+	(101, 'Analysis of the effect of extracted yellow kepok banana peels (Musa paradisiaca l.) on the size and morphology of Enterococcus faecalis', 'https://scholar.google.com/scholar?hl=en&as_sdt=0,5', 'V Sutanti, D Fuadiyah, LH Hidayat, T Agnizarridlo, KS Anggiarta', 'Journal of Physics: Conference Series 1665 (1), 012031 | vol: | issue : | 2020', 58);
+/*!40000 ALTER TABLE `publication` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
